@@ -460,7 +460,7 @@
     }
 
     .footer-link:hover,
-    .footer-item:focus {
+    .footer-link:focus {
       background-color: #31d0aa;
     }
 
