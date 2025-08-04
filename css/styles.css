@@ -287,7 +287,8 @@
       text-align: center;
     }
 
-    .team-media-images {
+    .team-media-images,
+    .footer-images {
       fill: #f4f4fd;
     }
 
