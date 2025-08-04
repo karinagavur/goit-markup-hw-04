@@ -153,6 +153,9 @@
       background-image: linear-gradient(rgba(46, 47, 66, 0.7)), 
       url(../images/people-office.jpg); 
       background-size: cover;
+      max-width: 1440px;
+      background-repeat: no-repeat;
+      background-position: center;
     }
   
     .main-title-one {
@@ -182,10 +185,13 @@
       height: 56px;
       display: block;
       margin: 0px auto;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   
     .button-title-one:hover,
-    .button-title-one:focus {
+    .button-title-one:focus,
+    .team-media-link:hover,
+    .team-media-link:focus {
       background-color: #404bbf;
     }
   
@@ -200,6 +206,18 @@
   
     .features-item {
       width: calc((100% - 72px) / 4);
+    }
+
+    .mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 112px;
+      background-color: #f4f4fd;
+      border-radius: 4px;
+      border: 1px solid #8e8f99;
+      margin-bottom: 8px;
+
     }
   
     .features-title-three {
@@ -268,6 +286,31 @@
       letter-spacing: 0.02em;
       text-align: center;
     }
+
+    .team-media-images {
+      fill: #f4f4fd;
+    }
+
+    .team-list-media {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .team-media-link {
+      width: 100%;
+      height: 100%;
+      background-color: #4d5ae5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .team-media {
+      width: 40px;
+      height: 40px;
+    }
   
     .images-portfolio {
       display: block;
@@ -288,6 +331,11 @@
     .portfolio-item {
       background: #fff;
       width: calc((100% - 48px) / 3);
+      transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .portfolio-item:hover {
+      box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     }
   
     .description-portfolio {
@@ -314,13 +362,36 @@
       color: #2e2f42;
       margin-bottom: 8px;
     }
-  
-  
+    
     .paragraph-portfolio {
       font-size: 16px;
       line-height: 1.5;
       letter-spacing: 0.02em;
   
+    }
+  
+    .box {
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .overlay {
+      position: absolute;
+      top: 0;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      color: #f4f4fd;
+      padding: 40px 32px;
+      width: 100%;
+      height: 100%;
+      background-color: #4d5ae5;
+      transform: translateY(100%);
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  
+    .box:hover .overlay {
+      transform: translateY(0%);
     }
   
     .page-footer {
@@ -347,22 +418,52 @@
       width: 264px;
     }
 
-                .box {
-                  position: relative;
-                  overflow: hidden;
-                }
-        
-                .overlay {
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  background-color: #4d5ae5;
-                  transform: translateX(-100%);
-                  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-                }
-        
-                .box:hover .overlay {
-                  transform: translateX(0);
-                }
+    .footer-container {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .box-footer {
+      margin-right: 120px;
+    }
+
+    .paragraph-footer-two {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+
+    .footer-list-media {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-item {
+      width: 40px;
+      height: 40px;
+    }
+
+    .footer-link {
+      width: 100%;
+      height: 100%;
+      background-color: #4d5ae5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-link:hover {
+      background-color: #31d0aa;
+    }
+
+    .footer-images {
+      fill: #f4f4fd;
+    }
+
+
+
+
